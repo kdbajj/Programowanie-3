@@ -5,8 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zadanie_1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow"  Height="500" Width="300">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
 
+        </Grid.RowDefinitions>
+        <Label x:Name="ResultLabel"
+               Content="0" 
+               Grid.ColumnSpan="4"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Bottom"
+               FontSize="90"/>
+               
+        <Button Name ="buttonC" Grid.Row="1" Content="C" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
+        <Button Name ="buttonPlusMinus" Grid.Column="1"  Content="+/-" FontSize="24" Background="#d6ccc2" BorderBrush="White" HorizontalAlignment="Right" Margin="0,161,0,64" Grid.RowSpan="3" Width="75"/>
+        <Button Name ="buttonPercent" Grid.Row="1" Grid.Column="2"  Content="%" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
+        <Button Name ="buttonDivide" Grid.Row="1" Grid.Column="3"  Content=":" FontSize="24" Background="#6c584c" Foreground="Beige" BorderBrush="White"/>
+
+
+        <Button Click="NumberEvent_Button" Name ="button7" Grid.Row="2" Content="7" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
+        <Button Click="NumberEvent_Button" Name ="button8" Grid.Row="2" Grid.Column="1"  Content="8" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
+        <Button Click="NumberEvent_Button" Name ="button9" Grid.Row="2" Grid.Column="2" Content="9" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
+        <Button Name ="buttonMultiply" Grid.Row="2" Grid.Column="3" Content="x" FontSize="24" Background="#6c584c" Foreground="Beige" BorderBrush="White"/>
+
+        <Button Click="NumberEvent_Button" Name ="button4" Grid.Row="3" Content="4" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
+        <Button Click="NumberEvent_Button" Name ="button5" Grid.Row="3" Grid.Column="1" Content="5" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
+        <Button Click="NumberEvent_Button" Name ="button6" Grid.Row="3" Grid.Column="2" Content="6" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
+        <Button Name ="buttonMinus" Grid.Row="3" Grid.Column="3" Content="-" FontSize="24" Background="#6c584c" Foreground="Beige" BorderBrush="White"/>
+
+        <Button Click="NumberEvent_Button" Name ="button1" Grid.Row="4" Content="1" FontSize="24" Background="#d6ccc2" BorderBrush="White" />
+        <Button Click="NumberEvent_Button" Name ="button2" Grid.Row="4" Grid.Column="1" Content="2" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
+        <Button Click="NumberEvent_Button" Name ="button3" Grid.Row="4" Grid.Column="2" Content="3" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
+        <Button Name ="buttonPlus" Grid.Row="4" Grid.Column="3" Content="+" FontSize="24" Background="#6c584c" Foreground="Beige" BorderBrush="White"/>
+
+        <Button Name ="button0" Grid.Row="5" Grid.ColumnSpan="2"  Content="0" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
+        <Button Name ="buttonComma" Grid.Row="5" Grid.Column="2" Content="," FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
+        <Button Name ="buttonEqual" Grid.Row="5" Grid.Column="3" Content="=" FontSize="24" Background="#6c584c" Foreground="Beige" BorderBrush="White"/>
+        
     </Grid>
 </Window>

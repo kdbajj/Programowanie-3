@@ -23,6 +23,16 @@ namespace Zadanie_1
         public MainWindow()
         {
             InitializeComponent();
+            
         }
+
+        private void NumberEvent_Button(object sender, RoutedEventArgs e)
+        {
+            var content = (sender as Button).Content;
+
+            ResultLabel.Content += content as string;
+        }
+
+        
     }
 }
