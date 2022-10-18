@@ -28,7 +28,7 @@
                VerticalAlignment="Bottom"
                FontSize="70"/>
         
-        <TextBlock x:Name="CurrentOperation"
+        <TextBlock Grid.ColumnSpan="4" x:Name="CurrentOperation"
                    FontSize="40"
                    />
         

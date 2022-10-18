@@ -99,8 +99,7 @@ namespace Zadanie_1
 
         private void buttonC_Click(object sender, RoutedEventArgs e)
         {
-            var output = "";
-            ResultLabel.Text = output;
+            
         }
 
         private bool ContainsOperation(string operation)=> operation.Contains('*') || operation.Contains('/') || operation.Contains('+') || operation.Contains('-');
@@ -138,7 +137,27 @@ namespace Zadanie_1
                 return int.Parse(elements[0]) * int.Parse(elements[1]);
             }
 
+            if (operation.Contains('%'))
+            {
+                var elements = operation.Split('%');
+
+                return int.Parse(elements[0]) * int.Parse(elements[1])/100;
+            }
+
+            if (operation.Contains('C'))
+            {
+                var output = "";
+                ResultLabel.Text = output;
+                CurrentOperation.Text = output;
+
+            }
             return default;
+        }
+
+        private void buttonPercent_Click(object sender, RoutedEventArgs e)
+        {
+            
+           
         }
     }
 }
