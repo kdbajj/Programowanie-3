@@ -31,31 +31,31 @@
         <TextBlock Grid.ColumnSpan="4" x:Name="CurrentOperation"
                    FontSize="40"
                    />
-        
-        <Button x:Name ="buttonC" Grid.Row="1" Content="C" FontSize="24" Background="#d6ccc2" BorderBrush="White" Click="buttonC_Click"/>
-        <Button x:Name ="buttonPlusMinus" Grid.Column="1"  Content="+-" FontSize="24" Background="#d6ccc2" BorderBrush="White" HorizontalAlignment="Right" Margin="0,161,0,64" Grid.RowSpan="3" Width="75"/>
-        <Button x:Name ="buttonPercent" Grid.Row="1" Grid.Column="2"  Content="%" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
-        <Button Click="buttonDivide_Click" x:Name ="buttonDivide" Grid.Row="1" Grid.Column="3"  Content=":" FontSize="24" Background="#6c584c" Foreground="Beige" BorderBrush="White"/>
+
+        <Button x:Name ="buttonC" Grid.Row="1" Grid.ColumnSpan="2" Content="C" FontSize="30" Background="#d6ccc2" BorderBrush="White" Click="buttonC_Click"/>
+        <!--<Button x:Name ="buttonPlusMinus" Grid.Column="1"  Content="+-" FontSize="24" Background="#d6ccc2" BorderBrush="White" HorizontalAlignment="Right" Margin="0,161,0,64" Grid.RowSpan="3" Width="75"/>-->
+        <!--<Button x:Name ="buttonPercent" Grid.Row="1" Grid.Column="2"  Content="%" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>-->
+        <Button Click="buttonDivide_Click" x:Name ="buttonDivide" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2"  Content=":" FontSize="30" Background="#6c584c" Foreground="Beige" BorderBrush="White"/>
 
 
-        <Button Click="NumberEvent_Button" x:Name ="button7" Grid.Row="2" Content="7" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
-        <Button Click="NumberEvent_Button" x:Name ="button8" Grid.Row="2" Grid.Column="1"  Content="8" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
-        <Button Click="NumberEvent_Button" x:Name ="button9" Grid.Row="2" Grid.Column="2" Content="9" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
-        <Button Click="buttonMultiply_Click" x:Name ="buttonMultiply" Grid.Row="2" Grid.Column="3" Content="x" FontSize="24" Background="#6c584c" Foreground="Beige" BorderBrush="White"/>
+        <Button Click="NumberEvent_Button" x:Name ="button7" Grid.Row="2" Content="7" FontSize="30" Background="#d6ccc2" BorderBrush="White"/>
+        <Button Click="NumberEvent_Button" x:Name ="button8" Grid.Row="2" Grid.Column="1"  Content="8" FontSize="30" Background="#d6ccc2" BorderBrush="White"/>
+        <Button Click="NumberEvent_Button" x:Name ="button9" Grid.Row="2" Grid.Column="2" Content="9" FontSize="30" Background="#d6ccc2" BorderBrush="White"/>
+        <Button Click="buttonMultiply_Click" x:Name ="buttonMultiply" Grid.Row="2" Grid.Column="3" Content="x" FontSize="30" Background="#6c584c" Foreground="Beige" BorderBrush="White"/>
 
-        <Button Click="NumberEvent_Button" x:Name ="button4" Grid.Row="3" Content="4" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
-        <Button Click="NumberEvent_Button" x:Name ="button5" Grid.Row="3" Grid.Column="1" Content="5" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
-        <Button Click="NumberEvent_Button" x:Name ="button6" Grid.Row="3" Grid.Column="2" Content="6" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
-        <Button Click="buttonMinus_Click" x:Name ="buttonMinus" Grid.Row="3" Grid.Column="3" Content="-" FontSize="24" Background="#6c584c" Foreground="Beige" BorderBrush="White"/>
+        <Button Click="NumberEvent_Button" x:Name ="button4" Grid.Row="3" Content="4" FontSize="30" Background="#d6ccc2" BorderBrush="White"/>
+        <Button Click="NumberEvent_Button" x:Name ="button5" Grid.Row="3" Grid.Column="1" Content="5" FontSize="30" Background="#d6ccc2" BorderBrush="White"/>
+        <Button Click="NumberEvent_Button" x:Name ="button6" Grid.Row="3" Grid.Column="2" Content="6" FontSize="30" Background="#d6ccc2" BorderBrush="White"/>
+        <Button Click="buttonMinus_Click" x:Name ="buttonMinus" Grid.Row="3" Grid.Column="3" Content="-" FontSize="30" Background="#6c584c" Foreground="Beige" BorderBrush="White"/>
 
-        <Button Click="NumberEvent_Button" x:Name ="button1" Grid.Row="4" Content="1" FontSize="24" Background="#d6ccc2" BorderBrush="White" />
-        <Button Click="NumberEvent_Button" x:Name ="button2" Grid.Row="4" Grid.Column="1" Content="2" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
-        <Button Click="NumberEvent_Button" x:Name ="button3" Grid.Row="4" Grid.Column="2" Content="3" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
-        <Button Click="buttonPlus_Click" x:Name ="buttonPlus" Grid.Row="4" Grid.Column="3" Content="+" FontSize="24" Background="#6c584c" Foreground="Beige" BorderBrush="White"/>
+        <Button Click="NumberEvent_Button" x:Name ="button1" Grid.Row="4" Content="1" FontSize="30" Background="#d6ccc2" BorderBrush="White" />
+        <Button Click="NumberEvent_Button" x:Name ="button2" Grid.Row="4" Grid.Column="1" Content="2" FontSize="30" Background="#d6ccc2" BorderBrush="White"/>
+        <Button Click="NumberEvent_Button" x:Name ="button3" Grid.Row="4" Grid.Column="2" Content="3" FontSize="30" Background="#d6ccc2" BorderBrush="White"/>
+        <Button Click="buttonPlus_Click" x:Name ="buttonPlus" Grid.Row="4" Grid.Column="3" Content="+" FontSize="30" Background="#6c584c" Foreground="Beige" BorderBrush="White"/>
 
-        <Button x:Name ="button0" Grid.Row="5" Grid.ColumnSpan="2"  Content="0" FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
-        <Button x:Name ="buttonComma" Grid.Row="5" Grid.Column="2" Content="," FontSize="24" Background="#d6ccc2" BorderBrush="White"/>
-        <Button x:Name ="buttonEqual" Click="buttonEqual_Click" Grid.Row="5" Grid.Column="3" Content="=" FontSize="24" Background="#6c584c" Foreground="Beige" BorderBrush="White"/>
+        <Button x:Name ="button0" Grid.Row="5" Grid.ColumnSpan="2"  Content="0" FontSize="30" Background="#d6ccc2" BorderBrush="White"/>
+        <!--<Button x:Name ="buttonComma" Grid.Row="5" Grid.Column="2" Content="," FontSize="24" Background="#d6ccc2" BorderBrush="White"/>-->
+        <Button x:Name ="buttonEqual" Click="buttonEqual_Click" Grid.Row="5" Grid.ColumnSpan="3" Grid.Column="2" Content="=" FontSize="30" Background="#6c584c" Foreground="Beige" BorderBrush="White"/>
         
     </Grid>
 </Window>

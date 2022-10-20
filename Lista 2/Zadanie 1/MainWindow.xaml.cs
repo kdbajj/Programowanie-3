@@ -99,7 +99,16 @@ namespace Zadanie_1
 
         private void buttonC_Click(object sender, RoutedEventArgs e)
         {
-            
+            var output = "";
+
+            try
+            {
+                ResultLabel.Text = output;
+            }
+            catch (System.FormatException)
+            {
+               
+            }
         }
 
         private bool ContainsOperation(string operation)=> operation.Contains('*') || operation.Contains('/') || operation.Contains('+') || operation.Contains('-');
@@ -111,44 +120,71 @@ namespace Zadanie_1
             if (operation.Contains('+'))
             {
                 var elements = operation.Split('+');
-
-               return int.Parse(elements[0]) + int.Parse(elements[1]);
+                try
+                {
+                    return int.Parse(elements[0]) + int.Parse(elements[1]);
+                }
+                catch (System.FormatException)
+                {
+                    return 0;
+                }
             }
 
             if (operation.Contains('-'))
             {
                 var elements = operation.Split('-');
 
-                return int.Parse(elements[0]) - int.Parse(elements[1]);
+                try
+                {
+                    return int.Parse(elements[0]) - int.Parse(elements[1]);
+                }
+                catch (System.FormatException)
+                {
+                    return 0;
+                }
             }
 
             if (operation.Contains('/'))
             {
                 var elements = operation.Split('/');
+                try
+                {
+                    return int.Parse(elements[0]) / int.Parse(elements[1]);
+                }
+                catch (System.FormatException)
+                {
+                    return 0;
+                }
 
-                return int.Parse(elements[0]) / int.Parse(elements[1]);
-                
             }
 
             if (operation.Contains('*'))
             {
                 var elements = operation.Split('*');
 
-                return int.Parse(elements[0]) * int.Parse(elements[1]);
+                try
+                {
+                    return int.Parse(elements[0]) * int.Parse(elements[1]);
+                }
+                catch(System.FormatException)
+                {
+                    return 0;
+                }
             }
 
-            if (operation.Contains('%'))
-            {
-                var elements = operation.Split('%');
-
-                return int.Parse(elements[0]) * int.Parse(elements[1])/100;
-            }
-
+            
             if (operation.Contains('C'))
             {
                 var output = "";
-                ResultLabel.Text = output;
-                CurrentOperation.Text = output;
+
+                try
+                {
+                    ResultLabel.Text = output;
+                }
+                catch (System.FormatException)
+                {
+                    return 0;
+                }
 
             }
             return default;
