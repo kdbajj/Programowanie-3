@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Zadanie_3.ViewModel;
 
 namespace Zadanie_3
 {
@@ -20,11 +21,17 @@ namespace Zadanie_3
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
 
+            var _gameViewModel = new GameViewModel();
+
+            this.DataContext = _gameViewModel;
+
             Window2 window2 = new Window2();
+            window2.DataContext = _gameViewModel;
             window2.Show();
         }
     }
