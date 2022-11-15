@@ -56,9 +56,12 @@
                             Margin="1"/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
+            <ItemsPanelTemplate>
+                    
+                <WrapPanel/>
+            </ItemsPanelTemplate>
+
+
             </ItemsControl>
         </Grid>
-   
-
-
 </Window>
