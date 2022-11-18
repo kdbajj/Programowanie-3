@@ -5,63 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Zadanie_3"
         xmlns:viewmodel="clr-namespace:Zadanie_3.ViewModel"
-        
         mc:Ignorable="d"
-        Title="MainWindow" Height="300" Width="600">
+        Title="Gracz 1 :)" Height="380" Width="710" >
 
 
-    <Grid Grid.Column="1">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
 
-            </Grid.ColumnDefinitions>
-
-
-
+        <Grid Grid.Column="0">
             <ItemsControl ItemsSource="{Binding Statki}">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <Button CommandParameter="{Binding}"
-                            Command="{Binding DataContext.AddShip, RelativeSource={RelativeSource AncestorType=Window}}"
-                            BorderBrush="Black"
-                            BorderThickness="1"
-                            Width="30"
-                            Height="30"
-                            Margin="1"/>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
- </Grid>
-
-
-
-
-            <ItemsControl ItemsSource="{Binding Statki2}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Button CommandParameter="{Binding}"
                             Command="{Binding DataContext.AddShip, RelativeSource={RelativeSource AncestorType=Window}}"
                             BorderBrush="Black"
-                            Background="{Binding isEmpty, Converter={StaticResource isEmptyColorButtonConverter}}"
                             BorderThickness="1"
                             Width="30"
                             Height="30"
                             Margin="1"/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
-            <ItemsPanelTemplate>
-                    
-                <WrapPanel/>
-            </ItemsPanelTemplate>
-
-
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
             </ItemsControl>
         </Grid>
+
+        <Grid Grid.Column="1">
+            <ItemsControl ItemsSource="{Binding Statki2}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Button CommandParameter="{Binding}"
+                            Command="{Binding DataContext.AddShip, RelativeSource={RelativeSource AncestorType=Window}}"
+                            BorderBrush="Black"
+                            BorderThickness="1"
+                            Width="30"
+                            Height="30"
+                            Margin="1" />
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </Grid>
+    </Grid>
 </Window>

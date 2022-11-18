@@ -26,6 +26,12 @@ namespace Zadanie_3.ViewModel
             }
 
             Statki2 = new ObservableCollection<Statki>();
+            for (int i = 0; i < 100; i++)
+            {
+                Statki2.Add(new Statki() { Player = 1 });
+            }
+
+
         }
 
         public int Player1Score
