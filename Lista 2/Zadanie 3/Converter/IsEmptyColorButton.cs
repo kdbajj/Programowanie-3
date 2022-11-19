@@ -8,5 +8,6 @@ namespace Zadanie_3.Converter
 {
     internal class IsEmptyColorButton
     {
+
     }
 }

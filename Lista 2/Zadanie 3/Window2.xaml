@@ -6,15 +6,15 @@
         xmlns:local="clr-namespace:Zadanie_3"
         mc:Ignorable="d"
         xmlns:viewmodel="clr-namespace:Zadanie_3.ViewModel"
-        Title="Gracz 2 :)" Height="380" Width="715" >
+        Title="Gracz 2 :)" Height="380" Width="700" Background="#E3D0D8" >
+        <Grid>
 
-
-    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
+        
         <Grid Grid.Column="0">
             <ItemsControl ItemsSource="{Binding Statki}">
                 <ItemsControl.ItemTemplate>
@@ -22,10 +22,11 @@
                         <Button CommandParameter="{Binding}"
                             Command="{Binding DataContext.AddShip, RelativeSource={RelativeSource AncestorType=Window}}"
                             BorderBrush="Black"
+                            Background="White"
                             BorderThickness="1"
                             Width="30"
                             Height="30"
-                            Margin="1"/>
+                            Margin="1.5"/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
                 <ItemsControl.ItemsPanel>
@@ -43,10 +44,11 @@
                         <Button CommandParameter="{Binding}"
                             Command="{Binding DataContext.AddShip, RelativeSource={RelativeSource AncestorType=Window}}"
                             BorderBrush="Black"
+                            Background="White"
                             BorderThickness="1"
                             Width="30"
                             Height="30"
-                            Margin="1"/>
+                            Margin="1.5"/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
                 <ItemsControl.ItemsPanel>
