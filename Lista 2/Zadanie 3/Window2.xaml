@@ -16,13 +16,13 @@
 
         
         <Grid Grid.Column="0">
-            <ItemsControl ItemsSource="{Binding Statki}">
+            <ItemsControl ItemsSource="{Binding Statki2}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Button CommandParameter="{Binding}"
                             Command="{Binding DataContext.AddShip, RelativeSource={RelativeSource AncestorType=Window}}"
                             BorderBrush="Black"
-                            Background="White"
+                            Background="{Binding IsShootGood, Converter={StaticResource IsEmptyColorButtonConverter}}"
                             BorderThickness="1"
                             Width="30"
                             Height="30"
@@ -38,13 +38,13 @@
         </Grid>
 
         <Grid Grid.Column="1">
-            <ItemsControl ItemsSource="{Binding Statki2}">
+            <ItemsControl ItemsSource="{Binding StatkiShoot}">
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Button CommandParameter="{Binding}"
-                            Command="{Binding DataContext.AddShip, RelativeSource={RelativeSource AncestorType=Window}}"
+                            Command="{Binding DataContext.ShootShip, RelativeSource={RelativeSource AncestorType=Window}}"
                             BorderBrush="Black"
-                            Background="White"
+                            Background="{Binding IsShootGood, Converter={StaticResource ShootColor}}"
                             BorderThickness="1"
                             Width="30"
                             Height="30"

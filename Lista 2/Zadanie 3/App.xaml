@@ -1,9 +1,10 @@
 ﻿<Application x:Class="Zadanie_3.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Zadanie_3"
+             xmlns:local="clr-namespace:Zadanie_3" xmlns:converter="clr-namespace:Zadanie_3.Converter"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <converter:IsEmptyColorButton x:Key="IsEmptyColorButtonConverter" />
+        <converter:ShootColor x:Key="ShootColor"/>
     </Application.Resources>
 </Application>
