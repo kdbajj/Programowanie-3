@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="lista_3.View.Controls"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:lista_3.View"
+             xmlns:converter="clr-namespace:lista_3.Converter"
+             mc:Ignorable="d"
+             d:DesignHeight="450"
+             d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <converter:NumberOfCustomersConverter x:Key="NumberOfCustomersConverter" />
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal"
+                    Margin="10">
+            <TextBlock Text="Klienci"
+                       FontSize="24"
+                       VerticalAlignment="Top"
+                       TextAlignment="Left" />
+            <TextBlock Text="{Binding NumberOfCustomers, Converter={StaticResource NumberOfCustomersConverter}}"
+                       Margin="10 0 0 0"
+                       FontSize="20"
+                       VerticalAlignment="Top"
+                       TextAlignment="Left" />
+        </StackPanel>
+        <StackPanel Grid.Column="1"
+                    Orientation="Horizontal"
+                    Margin="10">
+            <StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Margin"
+                            Value="5 0" />
+                </Style>
+            </StackPanel.Resources>
+            <Button Content="Dodaj"
+                    Width="50"
+                    Command="{Binding AddNewCustomerCommand}" />
+            <Button Content="Wczytaj"
+                    Width="50"
+                    Command="{Binding LoadCustomersCommand}" />
+            <Button Content="Zapisz"
+                    Width="50"
+                    Command="{Binding SaveCustomersCommand}" />
+        </StackPanel>
+    </Grid>
+</UserControl>
