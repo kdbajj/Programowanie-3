@@ -5,12 +5,109 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TravelApp.UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="930">
+        Title="MainWindow" Height="800" Width="930" FontFamily= "Assets/Fonts/#Nunito">
     <Grid>
-        <ScrollViewer Cursor="ScrollNE">
-            <Image Height="600" Width="930" VerticalAlignment="Top"
-            Source="/Assets/Images/mainImage.jpg" Stretch="Fill"/>
+        <ScrollViewer>
+            <StackPanel>
+                <Image Height="600" Width="930" VerticalAlignment="Top"
+            Source="/Assets/Images/mainImage.jpg" Stretch="Fill" />
+
+                <!--big text-->
+                <TextBlock Text="Explore the best places to visit" 
+                           FontSize="60"
+                           TextAlignment="Center"
+                           FontFamily= "Assets/Fonts/#Nunito"
+                           FontWeight="SemiBold"
+                           Foreground="#0c1821"
+                           Margin ="5"
+                           
+                           TextOptions.TextFormattingMode="Display" RenderTransformOrigin="0.5,0.5">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="0" Y="-450"/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+
+                <!--smaller text-->
+                <TextBlock Text="Where are you going?" 
+                           FontSize="30"
+                           TextAlignment="Center"
+                           FontFamily= "Assets/Fonts/#Nunito"
+                           FontWeight="SemiBold"
+                           Foreground="#0c1821"
+                           Margin ="5"
+                           
+                           TextOptions.TextFormattingMode="Display" RenderTransformOrigin="0.5,0.5">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform />
+                            <RotateTransform />
+                            <TranslateTransform X="0" Y="-300"/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+
+
+
+
+                <!--search bar-->
+                <TextBox 
+                         Text="{Binding SearchBox, UpdateSourceTrigger=PropertyChanged}"
+                        
+                         Margin="2,0,5,0"
+                         Background="#ffffff"
+                         FontSize="30" RenderTransformOrigin="0.5,0.5"
+                         FontFamily= "Assets/Fonts/#Nunito"
+                         BorderBrush="Black"
+                         BorderThickness="5"
+                         Foreground="#343a40"
+                         Opacity="0.60"
                     
+                         >
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" 
+                                   
+                                    Value="20">
+
+                            </Setter>
+                        </Style>
+                    </TextBox.Resources>
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform Y="-300"/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
+
+                <!--searching icon-->
+                <Border CornerRadius="1000"
+        HorizontalAlignment="Stretch"
+        VerticalAlignment="Stretch"
+        Background="DarkGray">
+                    <Grid>
+                        <Border x:Name="SomeIcon" 
+                        Width="50"
+                        Height="50"
+                        Margin="10"
+                        Background="Black"
+                        HorizontalAlignment="Left" />
+                        <Border HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        Margin="80"
+                        CornerRadius="3000"
+                        Background="White"/>
+                    </Grid>
+                </Border>
+            </StackPanel>
 
         </ScrollViewer>
     </Grid>

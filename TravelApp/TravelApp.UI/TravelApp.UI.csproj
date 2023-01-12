@@ -8,14 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Fonts\Nunito.ttf" />
     <None Remove="Assets\Images\mainImage.jpg" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Assets\Fonts\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <Content Include="Assets\Fonts\Nunito.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Assets\Images\mainImage.jpg" />
   </ItemGroup>
 
