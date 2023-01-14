@@ -7,7 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="930" FontFamily= "Assets/Fonts/#Nunito">
     <Grid>
-        <ScrollViewer>
+        <ScrollViewer RenderTransformOrigin="0.5,0.5">
+            <ScrollViewer.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="43"/>
+                </TransformGroup>
+            </ScrollViewer.RenderTransform>
             <StackPanel>
                 <Image Height="600" Width="930" VerticalAlignment="Top"
             Source="/Assets/Images/mainImage.jpg" Stretch="Fill" />
@@ -55,60 +63,44 @@
 
 
 
-                <!--search bar-->
-                <TextBox 
+
+                    <!--search bar-->
+
+                    <TextBox 
+                   
                          Text="{Binding SearchBox, UpdateSourceTrigger=PropertyChanged}"
                         
                          Margin="2,0,5,0"
-                         Background="#ffffff"
+                         
                          FontSize="30" RenderTransformOrigin="0.5,0.5"
                          FontFamily= "Assets/Fonts/#Nunito"
                          BorderBrush="Black"
                          BorderThickness="5"
                          Foreground="#343a40"
                          Opacity="0.60"
-                    
-                         >
-                    <TextBox.Resources>
+                    >
+
+
+                        <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" 
-                                   
                                     Value="20">
 
-                            </Setter>
-                        </Style>
-                    </TextBox.Resources>
-                    <TextBox.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform/>
-                            <TranslateTransform Y="-300"/>
-                        </TransformGroup>
-                    </TextBox.RenderTransform>
-                </TextBox>
+                                </Setter>
+                            </Style>
+                        </TextBox.Resources>
 
-                <!--searching icon-->
-                <Border CornerRadius="1000"
-        HorizontalAlignment="Stretch"
-        VerticalAlignment="Stretch"
-        Background="DarkGray">
-                    <Grid>
-                        <Border x:Name="SomeIcon" 
-                        Width="50"
-                        Height="50"
-                        Margin="10"
-                        Background="Black"
-                        HorizontalAlignment="Left" />
-                        <Border HorizontalAlignment="Stretch"
-                        VerticalAlignment="Stretch"
-                        Margin="80"
-                        CornerRadius="3000"
-                        Background="White"/>
-                    </Grid>
-                </Border>
+                        <TextBox.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform Y="-300"/>
+                            </TransformGroup>
+                        </TextBox.RenderTransform>
+                    </TextBox>
+
             </StackPanel>
-
         </ScrollViewer>
     </Grid>
 </Window>

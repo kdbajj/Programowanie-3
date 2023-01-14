@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <None Remove="Assets\Fonts\Nunito.ttf" />
+    <None Remove="Assets\Icons\searchIcon.png" />
     <None Remove="Assets\Images\mainImage.jpg" />
   </ItemGroup>
 
@@ -16,6 +17,10 @@
     <Content Include="Assets\Fonts\Nunito.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <ProjectReference Include="..\TravelApp.DataAccess\TravelApp.DataAccess.csproj" />
+    <ProjectReference Include="..\TravelApp.Model\TravelApp.Model.csproj" />
+    <Resource Include="Assets\Icons\searchIcon.png" />
     <Resource Include="Assets\Images\mainImage.jpg" />
   </ItemGroup>
 
