@@ -23,19 +23,19 @@ namespace TravelApp.UI
     {
         private MainViewModel _mainViewModel;
 
-        public MainWindow()
+        public MainWindow(MainViewModel mainViewModel)
         {
             InitializeComponent();
 
-            _mainViewModel = new MainViewModel();
+            _mainViewModel = mainViewModel;
             DataContext = _mainViewModel;
 
             Loaded += MainWindow_Loaded;
         }
 
-        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        private async void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            _mainViewModel.OnLoad();
+            await _mainViewModel.OnLoad();
         }
     }
 }

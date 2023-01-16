@@ -1,17 +1,26 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 using TravelApp.DataAccess;
 using TravelApp.Model;
 
 namespace TravelApp.UI.Data
 {
-    public class TravelAppDataService
+    public class TravelAppDataService : ITravelAppDataService
     {
-        public IEnumerable<Travel> GetAll()
+        private Func<TravelAppDbContext> _contextCreator;
+
+        public TravelAppDataService(Func<TravelAppDbContext> contextCreator)
         {
-            using (var ctx = new TravelAppDbContext())
+            _contextCreator = contextCreator;
+        }
+        public async Task<List<Travel>> GetAll()
+        {
+            using (var ctx = _contextCreator())
             {
-                return ctx.Travels.AsNoTracking().ToList();
+                return await ctx.Travels.AsNoTracking().ToListAsync();
             }
         }
     }

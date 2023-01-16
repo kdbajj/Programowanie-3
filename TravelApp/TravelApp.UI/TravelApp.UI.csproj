@@ -17,6 +17,7 @@
     <Content Include="Assets\Fonts\Nunito.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <PackageReference Include="Autofac" Version="6.5.0" />
     <PackageReference Include="EntityFramework" Version="6.4.4" />
     <ProjectReference Include="..\TravelApp.DataAccess\TravelApp.DataAccess.csproj" />
     <ProjectReference Include="..\TravelApp.Model\TravelApp.Model.csproj" />

@@ -5,29 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TravelApp.UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="930" FontFamily= "Assets/Fonts/#Nunito">
-    <Grid>
-        <ScrollViewer RenderTransformOrigin="0.5,0.5">
+        Title="MainWindow" Height="500" Width="750" FontFamily= "Assets/Fonts/#Nunito" Background="AliceBlue">
+    <Grid RenderTransformOrigin="0.5,0.5">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform/>
+                <TranslateTransform Y="-45"/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <ScrollViewer RenderTransformOrigin="0.5,0.5" Margin="0,0,0,-45">
             <ScrollViewer.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
                     <RotateTransform/>
-                    <TranslateTransform Y="43"/>
+                    <TranslateTransform Y="0"/>
                 </TransformGroup>
             </ScrollViewer.RenderTransform>
             <StackPanel>
-                <Image Height="600" Width="930" VerticalAlignment="Top"
-            Source="/Assets/Images/mainImage.jpg" Stretch="Fill" />
 
                 <!--big text-->
+
+                <!--big text-->
+                <!--<Image Height="500" Width="930"
+            Source="/Assets/Images/mainImage2.png" Stretch="Fill" Cursor="" />-->
+
+                <!--big text-->
+
+                <!--smaller text-->
+
+                <!--smaller text-->
+
+                <!--smaller text-->
+
+                <!--smaller text-->
                 <TextBlock Text="Explore the best places to visit" 
-                           FontSize="60"
+                           FontSize="50"
                            TextAlignment="Center"
                            FontFamily= "Assets/Fonts/#Nunito"
-                           FontWeight="SemiBold"
-                           Foreground="#0c1821"
-                           Margin ="5"
+                           FontWeight="Thin"
+                           Foreground="Black"
+                            Height="576" Width="732"
                            
                            TextOptions.TextFormattingMode="Display" RenderTransformOrigin="0.5,0.5">
                     <TextBlock.RenderTransform>
@@ -35,19 +55,19 @@
                             <ScaleTransform/>
                             <SkewTransform/>
                             <RotateTransform/>
-                            <TranslateTransform X="0" Y="-450"/>
+                            <TranslateTransform X="0" Y="130"/>
                         </TransformGroup>
                     </TextBlock.RenderTransform>
                 </TextBlock>
 
                 <!--smaller text-->
                 <TextBlock Text="Where are you going?" 
-                           FontSize="30"
+                           FontSize="35"
                            TextAlignment="Center"
                            FontFamily= "Assets/Fonts/#Nunito"
-                           FontWeight="SemiBold"
+                           FontWeight="Thin"
                            Foreground="#0c1821"
-                           Margin ="5"
+                           Margin ="0"
                            
                            TextOptions.TextFormattingMode="Display" RenderTransformOrigin="0.5,0.5">
                     <TextBlock.RenderTransform>
@@ -55,50 +75,78 @@
                             <ScaleTransform />
                             <SkewTransform />
                             <RotateTransform />
-                            <TranslateTransform X="0" Y="-300"/>
+                            <TranslateTransform X="0" Y="-250"/>
                         </TransformGroup>
                     </TextBlock.RenderTransform>
                 </TextBlock>
 
 
+                <!--search bar-->
 
-
-
-                    <!--search bar-->
-
-                    <TextBox 
+                <TextBox 
                    
                          Text="{Binding SearchBox, UpdateSourceTrigger=PropertyChanged}"
                         
-                         Margin="2,0,5,0"
+                         Margin="30,20,30,0"
                          
                          FontSize="30" RenderTransformOrigin="0.5,0.5"
                          FontFamily= "Assets/Fonts/#Nunito"
                          BorderBrush="Black"
-                         BorderThickness="5"
-                         Foreground="#343a40"
-                         Opacity="0.60"
+                         BorderThickness="6"
+                         Foreground="Black"
+                    Background=" #fff"
+                         Opacity="0.70"
+                        
+
                     >
 
 
-                        <TextBox.Resources>
+                    <TextBox.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" 
-                                    Value="20">
+                                    Value="20"/>
+                        </Style>
+                    </TextBox.Resources>
 
-                                </Setter>
-                            </Style>
-                        </TextBox.Resources>
+                    <TextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform Y="-250"/>
+                        </TransformGroup>
+                    </TextBox.RenderTransform>
+                </TextBox>
 
-                        <TextBox.RenderTransform>
-                            <TransformGroup>
-                                <ScaleTransform/>
-                                <SkewTransform/>
-                                <RotateTransform/>
-                                <TranslateTransform Y="-300"/>
-                            </TransformGroup>
-                        </TextBox.RenderTransform>
-                    </TextBox>
+                <StackPanel>
+                    <TextBlock Text="Travels:" Margin="0" FontSize="50" FontWeight="Thin" HorizontalAlignment="Center"/>
+                    <StackPanel Margin="5 0">
+                        <ItemsControl x:Name="ListViewProducts" ItemsSource="{Binding Travels}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border Margin="5 0 0 5" Width="230" Height="260">
+                                        <StackPanel>
+                                            <Border Width="150" Height="150" CornerRadius="5" Margin="5 5 5 5 " BorderBrush="Black" BorderThickness="2">
+
+                                                <!--<Border.Background>
+                                                    <Imagebrush imagesource="{binding image}"/>
+                                                </Border.Background>-->
+
+                                            </Border>
+                                            <TextBlock Margin="5" Text="{Binding Price, StringFormat=\{0:C\}}" FontSize="17"/>
+                                            <TextBlock Margin="5 0" Text="{Binding City}" FontSize="15"/>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                    </StackPanel>
+                </StackPanel>
 
             </StackPanel>
         </ScrollViewer>

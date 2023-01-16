@@ -55,6 +55,22 @@
     <Compile Include="Migrations\202301121256515_InitialDatabase.designer.cs">
       <DependentUpon>202301121256515_InitialDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301152357449_NewTravels.cs" />
+    <Compile Include="Migrations\202301152357449_NewTravels.designer.cs">
+      <DependentUpon>202301152357449_NewTravels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301160006082_NewTravels1.cs" />
+    <Compile Include="Migrations\202301160006082_NewTravels1.designer.cs">
+      <DependentUpon>202301160006082_NewTravels1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301160039346_NewTravels2.cs" />
+    <Compile Include="Migrations\202301160039346_NewTravels2.designer.cs">
+      <DependentUpon>202301160039346_NewTravels2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301160111370_NewTravels3.cs" />
+    <Compile Include="Migrations\202301160111370_NewTravels3.designer.cs">
+      <DependentUpon>202301160111370_NewTravels3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TravelAppDbContext.cs" />
@@ -72,6 +88,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202301121256515_InitialDatabase.resx">
       <DependentUpon>202301121256515_InitialDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301152357449_NewTravels.resx">
+      <DependentUpon>202301152357449_NewTravels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301160006082_NewTravels1.resx">
+      <DependentUpon>202301160006082_NewTravels1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301160039346_NewTravels2.resx">
+      <DependentUpon>202301160039346_NewTravels2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301160111370_NewTravels3.resx">
+      <DependentUpon>202301160111370_NewTravels3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
