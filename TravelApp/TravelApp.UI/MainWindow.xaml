@@ -128,9 +128,9 @@
                                         <StackPanel>
                                             <Border Width="150" Height="150" CornerRadius="5" Margin="5 5 5 5 " BorderBrush="Black" BorderThickness="2">
 
-                                                <!--<Border.Background>
-                                                    <Imagebrush imagesource="{binding image}"/>
-                                                </Border.Background>-->
+                                                <Border.Background>
+                                                    <ImageBrush ImageSource="{Binding TravelImage}"/>
+                                                </Border.Background>
 
                                             </Border>
                                             <TextBlock Margin="5" Text="{Binding Price, StringFormat=\{0:C\}}" FontSize="17"/>

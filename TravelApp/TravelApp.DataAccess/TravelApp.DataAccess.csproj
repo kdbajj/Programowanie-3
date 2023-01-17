@@ -71,13 +71,58 @@
     <Compile Include="Migrations\202301160111370_NewTravels3.designer.cs">
       <DependentUpon>202301160111370_NewTravels3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301162321127_NewTravels4.cs" />
+    <Compile Include="Migrations\202301162321127_NewTravels4.designer.cs">
+      <DependentUpon>202301162321127_NewTravels4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301162323410_NewTravels5.cs" />
+    <Compile Include="Migrations\202301162323410_NewTravels5.designer.cs">
+      <DependentUpon>202301162323410_NewTravels5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301162336129_NewTravels6.cs" />
+    <Compile Include="Migrations\202301162336129_NewTravels6.designer.cs">
+      <DependentUpon>202301162336129_NewTravels6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301170027180_NewTravels7.cs" />
+    <Compile Include="Migrations\202301170027180_NewTravels7.designer.cs">
+      <DependentUpon>202301170027180_NewTravels7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301170029419_NewTravels8.cs" />
+    <Compile Include="Migrations\202301170029419_NewTravels8.designer.cs">
+      <DependentUpon>202301170029419_NewTravels8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301170038044_NewTravels9.cs" />
+    <Compile Include="Migrations\202301170038044_NewTravels9.designer.cs">
+      <DependentUpon>202301170038044_NewTravels9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301170052319_NewTravels10.cs" />
+    <Compile Include="Migrations\202301170052319_NewTravels10.designer.cs">
+      <DependentUpon>202301170052319_NewTravels10.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TravelAppDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TravelAppDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TravelAppDbContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Assets\Fonts\Nunito.ttf" />
     <None Include="packages.config" />
+    <None Include="TravelAppDataSet.xsc">
+      <DependentUpon>TravelAppDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TravelAppDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TravelAppDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TravelAppDataSet.xss">
+      <DependentUpon>TravelAppDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TravelApp.Model\TravelApp.Model.csproj">
@@ -101,6 +146,33 @@
     <EmbeddedResource Include="Migrations\202301160111370_NewTravels3.resx">
       <DependentUpon>202301160111370_NewTravels3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301162321127_NewTravels4.resx">
+      <DependentUpon>202301162321127_NewTravels4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301162323410_NewTravels5.resx">
+      <DependentUpon>202301162323410_NewTravels5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301162336129_NewTravels6.resx">
+      <DependentUpon>202301162336129_NewTravels6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301170027180_NewTravels7.resx">
+      <DependentUpon>202301170027180_NewTravels7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301170029419_NewTravels8.resx">
+      <DependentUpon>202301170029419_NewTravels8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301170038044_NewTravels9.resx">
+      <DependentUpon>202301170038044_NewTravels9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301170052319_NewTravels10.resx">
+      <DependentUpon>202301170052319_NewTravels10.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Icons\searchIcon.png" />
+    <Content Include="Assets\Images\mainImage.jpg" />
+    <Content Include="Assets\Images\mainImage2.png" />
+    <Content Include="Assets\Images\Travelmages\paris.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

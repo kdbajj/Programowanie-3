@@ -31,6 +31,8 @@ namespace TravelApp.Model
 
         [StringLength(100)]
         public string HotelName { get; set; }
+
+        public byte[] TravelImage { get; set; }
     }
 }
 //modelBuilder.Configurations.Add(new TravelConfiguration());
