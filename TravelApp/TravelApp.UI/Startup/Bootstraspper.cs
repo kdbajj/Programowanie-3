@@ -19,7 +19,10 @@ namespace TravelApp.UI.Startup
             builder.RegisterType<TravelAppDbContext>().AsSelf();
 
             builder.RegisterType<MainWindow>().AsSelf();
+            builder.RegisterType<DetailsWindow>().AsSelf();
+            
             builder.RegisterType<MainViewModel>().AsSelf();
+            builder.RegisterType<DetailsViewModel>().AsSelf();
 
             builder.RegisterType<TravelAppDataService>().As<ITravelAppDataService>();
 
