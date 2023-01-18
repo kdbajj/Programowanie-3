@@ -4,6 +4,20 @@
              xmlns:local="clr-namespace:TravelApp.UI"
              Startup="Application_Startup">
     <Application.Resources>
-         
+        <Style x:Key="BookButton" TargetType="Button">
+            <Setter Property="Background" Value="#efbcd5"/>
+            <Setter Property="Foreground" Value="#0c1821"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="15" Background="{TemplateBinding Background}" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+                                
+                            </ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Application.Resources>
 </Application>

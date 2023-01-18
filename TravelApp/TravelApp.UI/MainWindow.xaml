@@ -135,6 +135,10 @@
                                             </Border>
                                             <TextBlock Margin="5" Text="{Binding Price, StringFormat=\{0:C\}}" FontSize="17"/>
                                             <TextBlock Margin="5 0" Text="{Binding City}" FontSize="15"/>
+                                            <Button  Width="120" 
+                                                     FontSize="16"
+                                                     Content="BOOK NOW"
+                                                     Style="{StaticResource BookButton}"/>
                                         </StackPanel>
                                     </Border>
                                 </DataTemplate>
