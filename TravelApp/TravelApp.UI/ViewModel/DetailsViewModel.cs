@@ -1,27 +1,21 @@
-﻿using TravelApp.Model;
+﻿using System.Collections.ObjectModel;
+using TravelApp.Model;
 
 namespace TravelApp.UI.ViewModel
 {
     public class DetailsViewModel : BaseViewModel
     {
-        private Travel _travel;
         private string _city;
 
         public DetailsViewModel(Travel travel)
         {
-            Travel = travel;
+            Travel = new ObservableCollection<Travel>();
+            Travel.Add(travel);
+
             City = travel.City;
         }
 
-        public Travel Travel
-        {
-            get => _travel;
-            set
-            {
-                _travel = value;
-                OnPropertyChanged();
-            }
-        }
+        public ObservableCollection<Travel> Travel { get; set; }
 
         public string City
         {

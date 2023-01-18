@@ -4,9 +4,77 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TravelApp.UI"
+        xmlns:viewmodel="clr-namespace:TravelApp.UI.ViewModel"
+        d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
         mc:Ignorable="d"
-        Title="DetailsWindow" Height="300" Width="300">
+        Title="DetailsWindow"
+        Height="400"
+        Width="400">
     <Grid>
-        <TextBlock Text="{Binding City}" FontSize="25"/>
+        <StackPanel>
+            <ItemsControl x:Name="Details"
+                          ItemsSource="{Binding Travel}"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Center">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="0 30 0 0"
+                                Width="300"
+                                Height="300"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center">
+                            <StackPanel>
+                                <Border Width="150"
+                                        Height="150"
+                                        CornerRadius="5"
+                                        BorderBrush="Black"
+                                        Margin="5 5 5 5 "
+                                        BorderThickness="2">
+
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="{Binding TravelImage}" />
+                                    </Border.Background>
+
+                                </Border>
+                                <TextBlock Margin="5"
+                                           Text="{Binding Country}"
+                                           FontSize="18"
+                                           HorizontalAlignment="Center" />
+
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center">
+                                    <TextBlock Margin="5 0"
+                                               Text="Food:"
+                                               FontSize="14"
+                                               HorizontalAlignment="Center" />
+
+                                    <TextBlock Text="{Binding Food}"
+                                               FontSize="14"
+                                               HorizontalAlignment="Right" />
+
+                                </StackPanel>
+
+                                <TextBlock Margin="5 0"
+                                           Text="{Binding City}"
+                                           FontSize="14"
+                                           HorizontalAlignment="Center" />
+
+                                <Button Width="140"
+                                        Height="35"
+                                        FontSize="18"
+                                        Content="ADD TO BASKET" />
+
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </StackPanel>
     </Grid>
 </Window>
