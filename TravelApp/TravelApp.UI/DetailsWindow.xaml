@@ -8,8 +8,10 @@
         d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
         mc:Ignorable="d"
         Title="DetailsWindow"
-        Height="400"
-        Width="400">
+        Height="450"
+        Width="450"
+        Background="AliceBlue"
+        ResizeMode="NoResize">
     <Grid>
         <StackPanel>
             <ItemsControl x:Name="Details"
@@ -20,10 +22,10 @@
                     <DataTemplate>
                         <Border Margin="0 30 0 0"
                                 Width="300"
-                                Height="300"
+                                Height="400"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center">
-                            <StackPanel>
+                            <StackPanel HorizontalAlignment="Center">
                                 <Border Width="150"
                                         Height="150"
                                         CornerRadius="5"
@@ -38,16 +40,32 @@
                                 </Border>
                                 <TextBlock Margin="5"
                                            Text="{Binding Country}"
-                                           FontSize="18"
-                                           HorizontalAlignment="Center" />
+                                           FontSize="28"
+                                           HorizontalAlignment="Center"
+                                           FontWeight="SemiBold" />
 
                                 <StackPanel Orientation="Horizontal"
-                                            HorizontalAlignment="Center"
+                                            HorizontalAlignment="Left"
+                                            VerticalAlignment="Center">
+                                    <TextBlock Margin="5 0"
+                                               Text="City:"
+                                               FontSize="14"
+                                               HorizontalAlignment="Center"
+                                               FontWeight="Bold" />
+
+                                    <TextBlock Text="{Binding City}"
+                                               FontSize="14"
+                                               HorizontalAlignment="Right" />
+
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Left"
                                             VerticalAlignment="Center">
                                     <TextBlock Margin="5 0"
                                                Text="Food:"
                                                FontSize="14"
-                                               HorizontalAlignment="Center" />
+                                               HorizontalAlignment="Center"
+                                               FontWeight="Bold" />
 
                                     <TextBlock Text="{Binding Food}"
                                                FontSize="14"
@@ -55,15 +73,58 @@
 
                                 </StackPanel>
 
-                                <TextBlock Margin="5 0"
-                                           Text="{Binding City}"
-                                           FontSize="14"
-                                           HorizontalAlignment="Center" />
 
-                                <Button Width="140"
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Left"
+                                            VerticalAlignment="Center">
+                                    <TextBlock Margin="5 0"
+                                               Text="Transport:"
+                                               FontSize="14"
+                                               HorizontalAlignment="Left"
+                                               FontWeight="Bold" />
+
+                                    <TextBlock Text="{Binding Transport}"
+                                               FontSize="14"
+                                               HorizontalAlignment="Right" />
+
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Left"
+                                            VerticalAlignment="Center">
+                                    <TextBlock Margin="5 0"
+                                               Text="Price:"
+                                               FontSize="14"
+                                               HorizontalAlignment="Left"
+                                               FontWeight="Bold" />
+
+                                    <TextBlock Text="{Binding Price , StringFormat=\{0:C\}}"
+                                               FontSize="14"
+                                               HorizontalAlignment="Right" />
+
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal"
+                                            HorizontalAlignment="Left"
+                                            VerticalAlignment="Center">
+                                    <TextBlock Margin="5 0"
+                                               Text="Hotel name:"
+                                               FontSize="14"
+                                               HorizontalAlignment="Center"
+                                               FontWeight="Bold" />
+
+                                    <TextBlock Text="{Binding HotelName}"
+                                               FontSize="14"
+                                               HorizontalAlignment="Right" />
+
+                                </StackPanel>
+
+                                <Button Margin="0 30 0 0"
+                                        Content="ADD TO BASKET"
+                                        Width="160"
                                         Height="35"
                                         FontSize="18"
-                                        Content="ADD TO BASKET" />
+                                        Style="{StaticResource BookButton}" />
 
                             </StackPanel>
                         </Border>
