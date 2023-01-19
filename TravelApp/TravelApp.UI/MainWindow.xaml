@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:TravelApp.UI"
         mc:Ignorable="d"
         Title="MainWindow"
-        Height="500"
+        Height="600"
         Width="750"
         FontFamily="Assets/Fonts/#Nunito"
         Background="AliceBlue">
@@ -30,27 +30,24 @@
                 </TransformGroup>
             </ScrollViewer.RenderTransform>
             <StackPanel>
-
-                <!--big text-->
-
-                <!--big text-->
-                <!--<Image Height="500" Width="930"
-            Source="/Assets/Images/mainImage2.png" Stretch="Fill" Cursor="" />-->
-
-                <!--big text-->
-
-                <!--smaller text-->
-
-                <!--smaller text-->
-
-                <!--smaller text-->
-
-                <!--smaller text-->
+                <Image Source="/Assets/Images/logo3.jpg"
+                       Height="200"
+                       Width="705"
+                       Margin="20 90 0 0">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform />
+                            <SkewTransform />
+                            <RotateTransform />
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
                 <TextBlock Text="Explore the best places to visit"
                            FontSize="50"
+                           Margin="0 -120 0 0"
                            TextAlignment="Center"
                            FontFamily="Assets/Fonts/#Nunito"
-                           FontWeight="Thin"
+                           FontWeight="Light"
                            Foreground="Black"
                            Height="576"
                            Width="732"
@@ -72,9 +69,9 @@
                            FontSize="35"
                            TextAlignment="Center"
                            FontFamily="Assets/Fonts/#Nunito"
-                           FontWeight="Thin"
+                           FontWeight="Light"
                            Foreground="#0c1821"
-                           Margin="0"
+                           Margin="0 -30 0 0 "
                            TextOptions.TextFormattingMode="Display"
                            RenderTransformOrigin="0.5,0.5">
                     <TextBlock.RenderTransform>
@@ -92,6 +89,7 @@
                 <!--search bar-->
 
                 <TextBox Text="{Binding SearchBox, UpdateSourceTrigger=PropertyChanged}"
+                         
                          Margin="30,20,30,0"
                          FontSize="30"
                          RenderTransformOrigin="0.5,0.5"
@@ -122,9 +120,9 @@
 
                 <StackPanel>
                     <TextBlock Text="Travels:"
-                               Margin="0"
+                               Margin="0 -150 0 0"
                                FontSize="50"
-                               FontWeight="Thin"
+                               FontWeight="Light"
                                HorizontalAlignment="Center" />
                     <StackPanel Margin="5 0">
                         <ItemsControl x:Name="ListViewProducts"

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Windows;
 using TravelApp.Model;
@@ -14,6 +16,7 @@ namespace TravelApp.UI.ViewModel
         public string _searchBox;
         private ITravelAppDataService _travelAppDataService;
         private bool _isDetailsWindowOpen;
+        private List<Travel> _travels;
 
         public MainViewModel(ITravelAppDataService travelAppDataService)
         {
@@ -29,7 +32,11 @@ namespace TravelApp.UI.ViewModel
             set
             {
                 _searchBox = value;
+
                 OnPropertyChanged();
+
+                SeachBoxFinder();
+
             }
         }
 
@@ -46,6 +53,8 @@ namespace TravelApp.UI.ViewModel
             {
                 Travels.Add(travel);
             }
+
+            _travels = travelsData;
         }
 
         private void OpenDetailsWindow(object? obj)
@@ -82,6 +91,29 @@ namespace TravelApp.UI.ViewModel
             newWindow.Show();
 
             //_isDetailsWindowOpen = false;
+        }
+
+        private void SeachBoxFinder()
+        {
+            if (SearchBox.Length == 0)
+            {
+                Travels.Clear();
+
+                foreach (var travel in _travels)
+                {
+                    Travels.Add(travel);
+                }
+
+                return;
+            }
+
+            var temp = _travels.Where((travel) => travel.City == SearchBox);
+
+            Travels.Clear();
+            foreach (var travel in temp)
+            {
+                Travels.Add(travel);
+            }
         }
     }
 }

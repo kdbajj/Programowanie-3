@@ -17,7 +17,8 @@
             <ItemsControl x:Name="Details"
                           ItemsSource="{Binding Travel}"
                           HorizontalAlignment="Center"
-                          VerticalAlignment="Center">
+                          VerticalAlignment="Center"
+                         >
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <Border Margin="0 30 0 0"

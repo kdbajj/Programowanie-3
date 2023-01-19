@@ -10,6 +10,9 @@
   <ItemGroup>
     <None Remove="Assets\Fonts\Nunito.ttf" />
     <None Remove="Assets\Icons\searchIcon.png" />
+    <None Remove="Assets\Images\logo.jpg" />
+    <None Remove="Assets\Images\logo2.png" />
+    <None Remove="Assets\Images\logo3.jpg" />
     <None Remove="Assets\Images\mainImage.jpg" />
   </ItemGroup>
 
@@ -22,6 +25,9 @@
     <ProjectReference Include="..\TravelApp.DataAccess\TravelApp.DataAccess.csproj" />
     <ProjectReference Include="..\TravelApp.Model\TravelApp.Model.csproj" />
     <Resource Include="Assets\Icons\searchIcon.png" />
+    <Resource Include="Assets\Images\logo.jpg" />
+    <Resource Include="Assets\Images\logo2.png" />
+    <Resource Include="Assets\Images\logo3.jpg" />
     <Resource Include="Assets\Images\mainImage.jpg" />
   </ItemGroup>
 
