@@ -1,10 +1,14 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media.Imaging;
 using TravelApp.Model;
 using TravelApp.UI.Command;
 using TravelApp.UI.Data;
@@ -24,6 +28,44 @@ namespace TravelApp.UI.ViewModel
             Travels = new ObservableCollection<Travel>();
 
             OpenDetailsWindowCommand = new DelegateCommand(OpenDetailsWindow);
+
+
+        }
+
+        private async void UpdateImage()
+        {
+            BitmapImage image;
+
+            //OpenFileDialog op = new OpenFileDialog();
+            //op.Title = "Select a picture";
+            //op.Filter = "All supported graphics|*.jpg;*.jpeg;*.png|" +
+            //            "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" +
+            //            "Portable Network Graphic (*.png)|*.png";
+            //if (op.ShowDialog() == true)
+            //{
+            //    image = new BitmapImage(new Uri(op.FileName));
+            //}
+            //else
+            //{
+            //    return;
+            //}
+
+            image = new BitmapImage(new Uri(
+                @"C:\Users\kdbaj\Desktop\repos\programowanie-3\TravelApp\TravelApp.UI\Assets\Images\Travelmages\oslo.jpg"));
+
+            byte[] streamByte;
+
+            using (var stream = new MemoryStream())
+            {
+                var encoder = new JpegBitmapEncoder(); // or some other encoder
+                encoder.Frames.Add(BitmapFrame.Create(image));
+                encoder.Save(stream);
+                streamByte = stream.ToArray();
+            }
+
+            var travel = Travels[4];
+            travel.TravelImage = streamByte;
+            await _travelAppDataService.UpdateTravel(travel);
         }
 
         public string SearchBox
@@ -53,6 +95,9 @@ namespace TravelApp.UI.ViewModel
             }
 
             _travels = travelsData;
+
+            //UpdateImage();
+
         }
 
         private void OpenDetailsWindow(object? obj)
@@ -112,6 +157,7 @@ namespace TravelApp.UI.ViewModel
             {
                 Travels.Add(travel);
             }
+
         }
     }
 }

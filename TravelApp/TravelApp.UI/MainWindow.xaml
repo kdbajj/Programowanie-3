@@ -237,13 +237,7 @@
                                                     BorderBrush="Black"
                                                     BorderThickness="2">
 
-                                                <Border.Background>
-                                                    <ImageBrush>
-                                                        <ListView ItemsSource="{Binding Images}">
-
-                                                        </ListView>
-                                                    </ImageBrush>
-                                                </Border.Background>
+                                                <Image Source="{Binding TravelImage}"/>
 
                                             </Border>
                                             <TextBlock Margin="5"

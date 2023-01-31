@@ -14,14 +14,25 @@
     <None Remove="Assets\Images\logo2.png" />
     <None Remove="Assets\Images\logo3.jpg" />
     <None Remove="Assets\Images\mainImage.jpg" />
+    <None Remove="Assets\Images\Travelmages\dublin.jpg" />
+    <None Remove="Assets\Images\Travelmages\london.jpg" />
+    <None Remove="Assets\Images\Travelmages\manchester.jpg" />
+    <None Remove="Assets\Images\Travelmages\oslo.jpg" />
+    <None Remove="Assets\Images\Travelmages\warsaw.jpg" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Assets\Fonts\Nunito.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Assets\Images\Travelmages\dublin.jpg" />
+    <Resource Include="Assets\Images\Travelmages\manchester.jpg" />
+    <Resource Include="Assets\Images\Travelmages\london.jpg" />
+    <Resource Include="Assets\Images\Travelmages\oslo.jpg" />
+    <Resource Include="Assets\Images\Travelmages\warsaw.jpg" />
     <PackageReference Include="Autofac" Version="6.5.0" />
     <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
     <ProjectReference Include="..\TravelApp.DataAccess\TravelApp.DataAccess.csproj" />
     <ProjectReference Include="..\TravelApp.Model\TravelApp.Model.csproj" />
     <Resource Include="Assets\Icons\searchIcon.png" />

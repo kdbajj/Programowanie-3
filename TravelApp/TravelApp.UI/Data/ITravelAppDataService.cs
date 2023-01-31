@@ -7,5 +7,6 @@ namespace TravelApp.UI.Data
     public interface ITravelAppDataService
     {
         Task<List<Travel>> GetAll();
+        Task UpdateTravel(Travel travel);
     }
 }

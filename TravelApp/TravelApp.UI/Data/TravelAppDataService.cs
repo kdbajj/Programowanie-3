@@ -23,5 +23,15 @@ namespace TravelApp.UI.Data
                 return await ctx.Travels.AsNoTracking().ToListAsync();
             }
         }
+
+        public async Task UpdateTravel(Travel travel)
+        {
+            using (var ctx = _contextCreator())
+            {
+                ctx.Travels.Attach(travel);
+                ctx.Entry(travel).State = EntityState.Modified;
+                await ctx.SaveChangesAsync();
+            }
+        }
     }
 }
