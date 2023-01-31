@@ -106,6 +106,14 @@
     <Compile Include="Migrations\202301311317216_NewTravel.designer.cs">
       <DependentUpon>202301311317216_NewTravel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301312149433_NewTravel1.cs" />
+    <Compile Include="Migrations\202301312149433_NewTravel1.designer.cs">
+      <DependentUpon>202301312149433_NewTravel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301312150563_User.cs" />
+    <Compile Include="Migrations\202301312150563_User.designer.cs">
+      <DependentUpon>202301312150563_User.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TravelAppDataSet.Designer.cs">
@@ -176,6 +184,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202301311317216_NewTravel.resx">
       <DependentUpon>202301311317216_NewTravel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301312149433_NewTravel1.resx">
+      <DependentUpon>202301312149433_NewTravel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301312150563_User.resx">
+      <DependentUpon>202301312150563_User.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

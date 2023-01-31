@@ -101,7 +101,16 @@
                                 </Button>
                             </Grid>
                             <Grid>
-                                <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                <Button Background="#efbcd5" Command="{Binding OpenBasketWindowCommand}"
+                                        BorderBrush="White"
+                                        FontSize="19">
+                                    <StackPanel>
+                                        <TextBlock Text="Basket" />
+                                    </StackPanel>
+                                </Button>
+
+
+                                <!--<ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                           FontFamily="Century Gothic"
                                           FontSize="14"
                                           Foreground="#0c1821"
@@ -133,7 +142,7 @@
                                         </StackPanel>
                                     </ListViewItem>
                                     
-                                </ListView>
+                                </ListView>-->
                             </Grid>
                         </StackPanel>
                     </Grid>
@@ -234,7 +243,7 @@
                                             <Border Width="150"
                                                     Height="150"
                                                     CornerRadius="5"
-                                                    Margin="5 5 5 0 "
+                                                    Margin="5 5 5 5 "
                                                     BorderBrush="Black"
                                                     BorderThickness="2">
 

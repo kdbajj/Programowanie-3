@@ -1,5 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using TravelApp.Model;
+using TravelApp.UI.Command;
 
 namespace TravelApp.UI.ViewModel
 {
@@ -13,9 +14,12 @@ namespace TravelApp.UI.ViewModel
             Travel.Add(travel);
 
             City = travel.City;
+
+            OpenBasketCommand = new DelegateCommand(OpenBasket);
         }
 
         public ObservableCollection<Travel> Travel { get; set; }
+        public DelegateCommand OpenBasketCommand { get; set; }
 
         public string City
         {
@@ -26,7 +30,9 @@ namespace TravelApp.UI.ViewModel
                 OnPropertyChanged();
             }
         }
+        private void OpenBasket(object? obj)
+        {
 
-
+        }
     }
 }

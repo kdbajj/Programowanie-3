@@ -125,7 +125,9 @@
                                         Width="160"
                                         Height="35"
                                         FontSize="18"
-                                        Style="{StaticResource BookButton}" />
+                                        Style="{StaticResource BookButton}"
+                                        Command="{Binding DataContext.OpenBasketCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ItemsControl}}}"
+                                        CommandParameter="{Binding .}"/>
 
                             </StackPanel>
                         </Border>

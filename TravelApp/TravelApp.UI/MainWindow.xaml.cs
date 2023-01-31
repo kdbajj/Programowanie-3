@@ -48,16 +48,19 @@ namespace TravelApp.UI
             throw new NotImplementedException();
         }
 
-        //basket
-        private void ListViewItem_Selected_1(object sender, RoutedEventArgs e)
-        {
+     
+        ////basket
+        //private void ListViewItem_Selected_1(object sender, RoutedEventArgs e)
+        //{
+        //   BasketWindow basket = new BasketWindow();
+        //   basket.Show();
 
-        }
+        //}
 
-        //reservations
-        private void ListViewItem_Selected(object sender, RoutedEventArgs e)
-        {
+        ////reservations
+        //private void ListViewItem_Selected(object sender, RoutedEventArgs e)
+        //{
 
-        }
+        //}
     }
 }

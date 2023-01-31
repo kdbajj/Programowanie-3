@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.DirectoryServices;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -28,6 +29,7 @@ namespace TravelApp.UI.ViewModel
             Travels = new ObservableCollection<Travel>();
 
             OpenDetailsWindowCommand = new DelegateCommand(OpenDetailsWindow);
+            OpenBasketWindowCommand = new DelegateCommand(OpenBasketWindow);
 
 
         }
@@ -82,6 +84,7 @@ namespace TravelApp.UI.ViewModel
 
         public ObservableCollection<Travel> Travels { get; set; }
         public DelegateCommand OpenDetailsWindowCommand { get; set; }
+        public DelegateCommand OpenBasketWindowCommand { get; set; }
 
         public async Task OnLoad()
         {
@@ -134,6 +137,14 @@ namespace TravelApp.UI.ViewModel
             newWindow.Show();
 
             //_isDetailsWindowOpen = false;
+        }
+        private void OpenBasketWindow(object? obj)
+        {
+            var newWindow = new BasketWindow();
+            var basketViewModel = new BasketViewModel();
+
+            newWindow.DataContext = basketViewModel;
+            newWindow.Show();
         }
 
         private void SearchBoxFinder()

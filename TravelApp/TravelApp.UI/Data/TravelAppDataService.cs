@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Threading.Tasks;
 using TravelApp.DataAccess;
@@ -31,6 +32,15 @@ namespace TravelApp.UI.Data
                 ctx.Travels.Attach(travel);
                 ctx.Entry(travel).State = EntityState.Modified;
                 await ctx.SaveChangesAsync();
+            }
+        }
+
+        public async Task AddTravelToBasket(Travel travel)
+        {
+            using (var ctx = _contextCreator( ))
+            {
+                var user = await ctx.Users.ToListAsync();
+
             }
         }
     }
