@@ -20,9 +20,6 @@ namespace TravelApp.Model
         [StringLength(50)]
         public string Country { get; set; }
 
-        [StringLength(50)]
-        public string User { get; set; }
-
         public string Food { get; set; }
         public float Price { get; set; }
 

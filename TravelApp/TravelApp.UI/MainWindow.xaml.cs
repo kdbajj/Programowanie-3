@@ -37,5 +37,17 @@ namespace TravelApp.UI
         {
             await _mainViewModel.OnLoad();
         }
+
+        private void ButtonMenu_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        
     }
 }

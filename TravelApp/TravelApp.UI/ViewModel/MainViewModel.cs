@@ -13,8 +13,8 @@ namespace TravelApp.UI.ViewModel
 {
     public class MainViewModel : BaseViewModel
     {
-        public string _searchBox;
-        private ITravelAppDataService _travelAppDataService;
+        private string _searchBox;
+        private readonly ITravelAppDataService _travelAppDataService;
         private bool _isDetailsWindowOpen;
         private List<Travel> _travels;
 
@@ -33,10 +33,8 @@ namespace TravelApp.UI.ViewModel
             {
                 _searchBox = value;
 
+                SearchBoxFinder();
                 OnPropertyChanged();
-
-                SeachBoxFinder();
-
             }
         }
 
@@ -93,7 +91,7 @@ namespace TravelApp.UI.ViewModel
             //_isDetailsWindowOpen = false;
         }
 
-        private void SeachBoxFinder()
+        private void SearchBoxFinder()
         {
             if (SearchBox.Length == 0)
             {
