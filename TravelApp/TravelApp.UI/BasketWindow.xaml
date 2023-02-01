@@ -5,11 +5,35 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TravelApp.UI"
         xmlns:viewmodel="clr-namespace:TravelApp.UI.ViewModel"
-        d:DataContext="{d:DesignInstance Type=viewmodel:DetailsViewModel}"
+        d:DataContext="{d:DesignInstance Type=viewmodel:MainViewModel}"
         mc:Ignorable="d"
-        Title="BasketWindow" Height="450" Width="450">
+        Title="BasketWindow" Height="450" Width="450" Background="AliceBlue">
     <Grid>
-        
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top">
+            <TextBlock Margin="00 35 0 0"
+                       Text="Your reservations"
+                       FontSize="14"
+                       HorizontalAlignment="Center"
+                       FontWeight="Bold" />
+
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center">
+            <TextBlock Margin="5 0"
+                       Text="Hotel name:"
+                       FontSize="14"
+                       HorizontalAlignment="Center"
+                       FontWeight="Bold" />
+
+            <TextBlock Text="{Binding Basket}"
+                       FontSize="14"
+                       HorizontalAlignment="Right" />
+
+        </StackPanel>
 
     </Grid>
 </Window>

@@ -53,7 +53,7 @@ namespace TravelApp.UI.ViewModel
             //}
 
             image = new BitmapImage(new Uri(
-                @"C:\Users\kdbaj\Desktop\repos\programowanie-3\TravelApp\TravelApp.UI\Assets\Images\Travelmages\oslo.jpg"));
+                @"C:\Users\kdbaj\Desktop\repos\programowanie-3\TravelApp\TravelApp.UI\Assets\Images\Travelmages\dublin.jpg"));
 
             byte[] streamByte;
 
@@ -65,7 +65,7 @@ namespace TravelApp.UI.ViewModel
                 streamByte = stream.ToArray();
             }
 
-            var travel = Travels[4];
+            var travel = Travels[7];
             travel.TravelImage = streamByte;
             await _travelAppDataService.UpdateTravel(travel);
         }
